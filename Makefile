@@ -1,5 +1,5 @@
-CXX = gcc -std=c++17
-CXXFLAGS = -Wall -Og
+CXX = gcc
+CXXFLAGS = -Wall -Og `pkg-config --cflags --libs gtk+-3.0`
 SOURCES = $(wildcard *.c)
 OBJECTS = $(SOURCES:.c=.o)
 EXEC=main
